@@ -18,5 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/**
+ * Hotel routes
+ */
+
 Route::get('/hotels', 'Hotels@index')->name('hotels');
 Route::get('/hotels/view/{id}', 'Hotels@view')->name('hotels_detail_view');
+Route::get('/hotels/create', 'Hotels@create')->name('hotels_create_form');
+Route::post('/hotels', 'Hotels@store')->name('hotels_store_new');

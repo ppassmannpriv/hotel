@@ -9,6 +9,17 @@ use App\Room;
 
 class Hotel extends Model
 {
+    protected $guarded = ['id'];
+    /*protected $fillable = [
+        'name',
+        'description',
+        'street',
+        'postcode',
+        'city',
+        'country',
+        'hours'
+    ];*/
+
     public function getAddressAsHtml()
     {
         $address = "<address>";
